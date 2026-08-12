@@ -15277,7 +15277,7 @@ MonoBehaviour:
   poolOfItems:
   - itemName: Coin
     itemPrefab: {fileID: 8280860287020458654, guid: e52dee07fe0f4664eaf209ee64dae70a, type: 3}
-    spawnChance: 100
+    spawnChance: 15
   pickRandomFromPool: 1
 --- !u!4 &1972197753
 Transform:
