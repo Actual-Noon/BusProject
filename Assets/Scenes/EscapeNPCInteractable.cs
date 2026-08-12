@@ -81,13 +81,21 @@ public class EscapeNPCInteractable : InteractableBase
 
         if (timeLeft >= requiredTimeSeconds)
         {
-            // Enough coins + Enough time = WIN
+            if (RunSessionTracker.Instance != null)
+            {
+                RunSessionTracker.Instance.EndRun(true);
+            }
+
             Debug.Log("Player Wins!");
             SceneManager.LoadScene(winSceneName);
         }
         else
         {
-            // Enough coins BUT Not enough time = GAME OVER
+            if (RunSessionTracker.Instance != null)
+            {
+                RunSessionTracker.Instance.EndRun(false);
+            }
+
             Debug.Log("Player ran out of time! Game Over!");
             SceneManager.LoadScene(gameOverSceneName);
         }

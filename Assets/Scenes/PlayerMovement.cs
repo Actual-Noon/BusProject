@@ -53,6 +53,11 @@ public class Movement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         currentStamina = maxStamina;
 
+        if (RunSessionTracker.Instance != null)
+        {
+            RunSessionTracker.Instance.StartNewRun();
+        }
+
         if (cursorLock)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -103,6 +108,7 @@ public class Movement : MonoBehaviour
     }
 
     // Process input data and decide speed
+    // Inside Movement.cs -> UpdateMove()
     void UpdateMove()
     {
         Vector2 targetDir = Vector2.zero;
@@ -125,16 +131,22 @@ public class Movement : MonoBehaviour
         targetDir.Normalize();
 
         bool isMoving = targetDir.magnitude > 0;
+
+        // --- ADD THIS LINE TO TRACK HOLD TIME ---
+        if (isMoving && RunSessionTracker.Instance != null)
+        {
+            RunSessionTracker.Instance.AddWalkHoldTime(Time.deltaTime);
+        }
+        // ----------------------------------------
+
         float currentSpeed = walkSpeed;
 
-        // Determine if player is actively sprinting
         if (isSprintKeyPressed && isMoving && currentStamina > 0 && !isExhausted)
         {
             currentSpeed = sprintSpeed;
         }
 
         currentDir = Vector2.SmoothDamp(currentDir, targetDir, ref currentDirVelocity, moveSmoothTime);
-
         ApplyGravityAndMove(currentDir, currentSpeed);
     }
 

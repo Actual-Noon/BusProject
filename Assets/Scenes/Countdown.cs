@@ -74,6 +74,10 @@ public class CountdownTimer : MonoBehaviour
 
     private void GameOver()
     {
+        if (RunSessionTracker.Instance != null)
+        {
+            RunSessionTracker.Instance.EndRun(false);
+        }
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         SceneManager.LoadScene(gameOverSceneName);

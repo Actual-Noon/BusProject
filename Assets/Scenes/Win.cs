@@ -19,11 +19,13 @@ public class WinZone : MonoBehaviour
 
     private void WinGame()
     {
-        // 1. Unlock the cursor for the Win Menu
+        if (RunSessionTracker.Instance != null)
+        {
+            RunSessionTracker.Instance.EndRun(true);
+        }
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
-        // 2. Load the Win Scene
         SceneManager.LoadScene(winSceneName);
     }
 }
