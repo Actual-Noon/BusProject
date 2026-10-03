@@ -1,8 +1,6 @@
 # ตามล้อรถบัส (Follow the Bus)
 A Data-Driven 3D Simulation Game for Behavioral Decision-Making Analysis under Time Constraints
 
-![Game Banner](https://ibb.co/yFnvsqQ7)
-
 ---
 
 ## ภาพรวมโครงงาน (Overview)
@@ -55,7 +53,7 @@ A Data-Driven 3D Simulation Game for Behavioral Decision-Making Analysis under T
 
 ### สำหรับนักพัฒนา (Open in Unity)
 1. Clone Repository นี้ลงเครื่องด้วยคำสั่ง:
-   git clone https://github.com/your-username/follow-the-bus.git
+   git clone [https://github.com/your-username/follow-the-bus.git](https://github.com/Actual-Noon/BusProject.git)
 2. เปิดโปรแกรม Unity Hub เลือก Add project from disk
 3. เลือกโฟลเดอร์โปรเจกต์ และเปิดผ่าน Unity Editor
 4. ไปที่โฟลเดอร์ Assets/Scenes/MainMenu.unity แล้วกด Play
