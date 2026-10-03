@@ -1,6 +1,10 @@
 # ตามล้อรถบัส (Follow the Bus)
 A Data-Driven 3D Simulation Game for Behavioral Decision-Making Analysis under Time Constraints
 
+<img width="1919" height="1079" alt="Screenshot 2026-10-03 101507" src="https://github.com/user-attachments/assets/808792a6-ebd5-4c95-813f-4aaeb0c38183" />
+
+<img width="1506" height="654" alt="Screenshot 2026-10-03 101519" src="https://github.com/user-attachments/assets/0b2e50d7-2313-4d25-8b4f-6ecacb27d42f" />
+
 ---
 
 ## ภาพรวมโครงงาน (Overview)
