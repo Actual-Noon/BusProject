@@ -14,6 +14,11 @@ A Data-Driven 3D Simulation Game for Behavioral Decision-Making Analysis under T
 
 ---
 
+## เอกสารโครงงานฉบับสมบูรณ์ (Full Documentation)
+- **รายงานโครงงาน 5 บท (PDF):** [โครงงานเทคโนโลยี.pdf](https://github.com/user-attachments/files/32991085/default.pdf)
+
+
+---
 ## ฟีเจอร์หลัก (Key Features)
 
 ### ระบบการเล่น (Gameplay Mechanics)
